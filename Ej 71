@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+int acumLinea[3];
+int acumCoche[12];
+int acumTotal;
+int grilla[3][12];
+int i;
+char resp;
+int coche;
+int linea;
+int recaud;
+int fila=0;
+	do {
+			printf("Ingrese Nro de coche:\n");
+			scanf("%d",&coche);
+			printf("Ingrese Nro de linea:\n");
+			scanf("%d",&linea);
+			printf("Ingrese recaudacion:\n");
+			scanf("%d",&recaud);
+			
+			acumLinea[linea] = acumLinea[linea] + recaud;
+			acumCoche[coche] = acumCoche[coche] + recaud;
+			acumTotal = acumTotal + (acumLinea[linea]+acumCoche[coche]);
+				
+			grilla[fila][0] = coche;
+			grilla[fila][1] = linea;
+			grilla[fila][2] = recaud;
+			
+			printf("Ingresar otro? Y/N");
+			scanf("%c",&resp);
+			fila++;
+		} while (resp != 'y');
+			system("CLS");
+			
+			for(i=1;i<3;i++){
+				printf("Linea: %d\t\tRecaudacion:%d\n",i,acumLinea[i]);
+			}
+			for(i=1;i<3;i++){
+				printf("Coche: %d\t\tRecaudacion:%d\n",i,acumCoche[i]);
+			}
+			printf("Recaudacion total:\n",acumTotal);
+}
+
