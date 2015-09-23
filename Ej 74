@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define max 2
+
+int main () {
+
+	int micros[max];
+	float recaud[max];
+	float kms[max];
+        int i;
+	
+		for(i=0;i<2;i++){
+			printf("Ingrese Numero de micro:\n");
+			scanf("%d",&micros[i]);
+			printf("Ingrese recaudacion:\n");
+			scanf("%f",&recaud[i]);
+			printf("Ingrese Kms recorridos:\n");
+			scanf("%f",&kms[i]);
+		
+	}
+                printf("N. micro\tRecaudacion\tKms Recorridos\n");
+		for(i=0;i<2;i++){
+			printf("%d%f%f",micros[i],recaud[i],kms[i]);
+			
+		}
+
+}
