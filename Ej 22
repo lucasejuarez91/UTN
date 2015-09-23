@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	int i;
+	int num;
+	
+	printf("Ingrese un numero:\t");
+	scanf("%d",&num);
+	num = num + 1;
+	
+	for(i=0;i < num;i++){
+		printf("%d\n",i);
+	}
+}
