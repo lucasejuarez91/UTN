@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	float num1;
+	float num2;
+	float suma;
+	
+	printf("Ingrese el primer numero:\n");
+	scanf("%f",num1);
+	printf("Ingrese el segundo numero:\n");
+	scanf("%f",num2);
+	
+	suma = num1+num2;
+	
+	printf("Resultado de la suma:\t%.2f",suma);
+}
