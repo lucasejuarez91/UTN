@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 100
+
+int main(){
+    int i;
+    int j;
+    int a[MAX];
+    int b[MAX];
+    int c[MAX];
+    int minA;
+    int minB;
+    
+    for(i=0; i < MAX ; i++) {
+           printf("Vector A; Ingrese un numero:\n");
+           scanf("%d",&a[i]);
+           printf("Vector B; Ingrese un numero:\n");
+           scanf("%d",&b[i]); 
+			   if(i==0){
+				minA = a[i]; //10
+				minB = b[i]; // 4
+				}
+				
+				if(a[i] < minA){
+					minA = a[i];
+				}
+				if(b[i] < minB){
+					minB = b[i];
+				}
+					if(minB < minA){
+					c[i] = minB;
+					}
+			   }
+			   
+			for(j=0;j < MAX; j++){
+			printf("Vector A:\n");
+			printf("%d\n",a[j]);
+			printf("Vector B:\n");
+			printf("%d\n",b[j]);
+			printf("Vector C:\n");
+			printf("%d\n",c[j]);
+		}   
+			   			   
+    }   
+	
