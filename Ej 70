@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+int matriz[6][5];
+int horizontal[5];
+int vertical[6];
+int fila,columna;
+int suma=0;
+int i;
+
+/*Bucle que registra los numeros introducidos de teclado*/
+for(fila=0;fila<6;fila++)
+{
+    for(columna=0;columna<5;columna++)
+    {
+        printf("Introduce un numero para la posicion %d,%d\n: ",fila,columna);
+        scanf("%d",&matriz[fila][columna]);
+    }
+}
+
+
+/*Recorre el vector vertical y muestra los resultados*/
+for(i=0;i<6;i++)
+{
+    printf("%d\n",vertical[i]);
+}
+
+
+/*Recorre el vector horizontal y muestra los resultados*/
+for(i=0;i<5;i++)
+{
+    printf("%d",horizontal[i]);
+}
+system("PAUSE");
+}
