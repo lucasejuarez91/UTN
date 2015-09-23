@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	int num;
+	
+	printf("Ingrese un numero:\t");
+	scanf("%f",&num);
+	
+	if(num>0){
+		printf("El numero es positivo");
+	} else {
+		printf("El numero es negativo");
+	}
+}
