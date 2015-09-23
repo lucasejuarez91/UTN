@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define max 100
+
+int main()
+{
+
+int fila = 0;
+int cli;
+int cod;
+int monto;
+int totaldeposito=0;
+int totalcomisiones=0;
+int totalextracciones=0;
+int totalintereses=0;
+int saldo=0;
+int resp;
+int grilla[100][6];
+	do {
+			printf("Ingrese Nro de cliente:\n");
+			scanf("%d",&cli);
+	
+		do {
+			printf("Ingrese Cod de transaccion:\n");
+			scanf("%d",&cod);
+		
+			printf("Ingrese monto de operacion:\n");
+			scanf("%d",&monto);
+			
+			if(cod == 1){
+				totaldeposito = totaldeposito + monto;
+			} else if(cod == 2) {
+				totalextracciones = totalextracciones + monto;
+			} else if(cod == 3){
+				totalcomisiones = totalcomisiones + monto;
+			} else if(cod == 4){
+				totalintereses = totalintereses + monto;
+			} else {
+				printf("ingrese un valor correcto");
+			}
+				printf("agregar otro codigo de transaccion?1-si/0-no");
+				scanf("%d",&resp);
+			} while (resp != 0);
+			
+			saldo = ((totaldeposito+totalintereses)-(totalextracciones+totalcomisiones));
+				grilla[fila][0] = cli;
+				grilla[fila][1] = totaldeposito;
+				grilla[fila][2] = totalextracciones;
+				grilla[fila][3] = totalcomisiones;
+				grilla[fila][4] = totalintereses;
+				grilla[fila][5] = saldo;
+			fila++;
+		} while (resp != 0);
+		
+	for(fila=0;fila<100;fila++){ 
+		printf("Cliente\tDeposito\tExtracciones\tComisiones\tSaldo\n");
+		printf("%d\t%d\t%d\t%d\t%d\n",grilla[fila][0],grilla[fila][1],grilla[fila][2],grilla[fila][3],grilla[fila][4],grilla[fila][5]);
+			} 
+		}
