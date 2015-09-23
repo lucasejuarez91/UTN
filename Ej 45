@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	int i;
+	float nota[6];
+	char nombre[20];
+	int j;
+	int k;
+	int resp;
+	float acum;
+	float prom;
+	
+	do{
+		i=0;
+		printf("Ingrese Nombre:\n");
+		scanf("%c",&nombre[i]);
+			
+			for(j=0;j<6;j++){
+				printf("Ingrese nota:\n");
+					scanf("%.2f",&nota[j]);
+					acum = acum + nota[j];
+		}
+		prom = (acum / 6);
+		printf("Desea agregar otro? 1-Si/0-NO\n");
+		scanf("%d",&resp);
+		i++;
+	} while ( resp != 1);
+	for(k=0;k<i;k++){
+		printf("Nombre:%c,Promedio:%.2f",nombre[k],nota[k]);
+	}
+}
