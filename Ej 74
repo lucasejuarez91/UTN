@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define max 2
+#define max 39
 
 int main () {
 
@@ -9,7 +9,7 @@ int main () {
 	float kms[max];
         int i;
 	
-		for(i=0;i<2;i++){
+		for(i=0;i<40;i++){
 			printf("Ingrese Numero de micro:\n");
 			scanf("%d",&micros[i]);
 			printf("Ingrese recaudacion:\n");
@@ -19,8 +19,8 @@ int main () {
 		
 	}
                 printf("N. micro\tRecaudacion\tKms Recorridos\n");
-		for(i=0;i<2;i++){
-			printf("%d%f%f",micros[i],recaud[i],kms[i]);
+		for(i=0;i<40;i++){
+			printf("%d\t\t%.2f\t\t%.2f\n",micros[i],recaud[i],kms[i]);
 			
 		}
 
