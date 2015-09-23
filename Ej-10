@@ -1,0 +1,22 @@
+//Ejercicio 10
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 5
+
+int main(){
+    
+    float base=0;
+    float altura=0;
+    float area;
+    
+    printf("Ingrese la base:\n");
+    scanf("%f",&base);
+    printf("Ingrese la altura:\n");
+    scanf("%f",&altura);
+    area = (base*altura)/2;
+    printf("La superficie es:%.2f\n",area);
+    system("pause");
+    
+    
+}
