@@ -1,0 +1,21 @@
+// Ejercicio 58
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10
+
+int main(){
+    int i; int num[10];    
+    for(i=0; i < MAX ; i++) {
+           printf("Ingrese un numero:\n");
+           scanf("%d",&num[i]);   
+
+    }   
+    
+    for(i=0;i<MAX;i++){
+           printf("Indice %d tiene valor: %d\n",i,num[i]);                   
+           
+    }
+               system("Pause");                 
+    
+}
