@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+	int num1;
+	int resultado;
+	
+	do {
+	printf("Ingrese un numero:\n");
+	scanf("%d",&num1);
+	if(num1<0){
+		printf("ERROR, el numero debe ser mayor que cero.\n");
+		system("CLS");
+		}
+	} while(num1<0);
+	system("CLS");
+	resultado = (num1*num1);	
+	printf("El cuadrado del numero es:\t%d",resultado);
+}
