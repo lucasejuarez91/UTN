@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+/*
+Una fábrica tiene  30  obreros  con legajos  de  1  a  30. Por  cada  obrero se registran los movimientos  que 
+intervienen en la liquidación informando: N° de legajo, Sueldo básico, Bonificación por antigüedad.
+Se debe calcular el sueldo neto de cada obrero considerando:
+Un descuento por jubilación que representa el 16 % del sueldo básico
+Un descuento por obra social que representa el 4,5 % del sueldo básico
+Se pide:
+Listado como el siguiente:
+N° de legajo  Sueldo básico  Jubilación  Obra social  Antigüedad  Sueldo neto
+• Indicar cuál fue el legajo del o los obreros con mayor bonificación de antigüedad y cual fue esa cantidad
+       • Listado de todos los obreros ordenado por sueldo neto
+*/
+
+	for(i=0;i<30;i++){
+		printf("Ingrese Nro de legajo:\n");
+		scanf("%d",&leg[i]);
+		printf("Ingrese Sueldo Basico:\n");
+		scanf("%f",&suel_bas[i]);
+		printf("Ingrese Bonificacion por antiguedad:\n");
+		scanf("%f",&bon_antig[i]);
+		//descuentos
+		jubil[i] = ((suel_bas*16)/100);
+		obr_soc[i] = ((suel_bas*4.5)/100);
+		suel_net[i] = (suel_bas[i]-jubil[i]-obr_soc[i]+bon_antig[i]);
+		if(i==0){
+			legMax = leg[i];
+			bAntigMax = bon_antig[i];
+		}
+		
+		if(bAntigMax > bon_antig[i]){
+			legMax = leg[i];
+			bAntigMax = bon_antig[i];
+		}
+	}
+		for(i=0;i<30;i++){
+		printf("Nro Legajo\tSueldo Básico\tJubilacion\tObra social\tAntigüedad\tSueldo neto");
+		printf("%d\t%f\t%f\t%f\t%f\t%f\n",leg[i],suel_bas[i],jubil[i],obr_soc[i],bon_antig[i],suel_net[i]);
+		}
+		
+		
+			legMax = leg[i];
+			suelbMax = suel_bas[i];
+			bAntigMax = bon_antig[i];
+			jubilMax = jubil[i];
+			obrsocMax = obr_soc[i];
+			suelnMax = suel_net[i];
+}
+
