@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	int i;
+	int num;
+	char nomMax;
+	float altMax;
+	char apeMax;
+	char apellido[20];
+	char nombre[20];
+	float altura[4];
+	int resp;
+	
+	do{
+		i=0;
+		printf("Ingrese Apellido:\n");
+		scanf("%c",&apellido[i]);
+		printf("Ingrese Nombre:\n");
+		scanf("%c",&nombre[i]);
+		printf("Ingrese altura:\n");
+		scanf("%f",&altura[i]);
+		
+		if(i==0){
+			altMax = altura[i];
+			apeMax = apellido[i];
+			nomMax = nombre[i];
+		}
+		if(altura[i] > altMax){
+			altMax = altura[i];
+			apeMax = apellido[i];
+			nomMax = nombre[i];
+		}
+		printf("Desea agregar otro? 1-Si/0-NO\t");
+		scanf("%d",&resp);
+		i++;
+	} while ( resp != 1);
+	
+	printf("Alumno mas alto.\t Nombre:%c,Altura:%.2f",nomMax,altMax);
+	
+}
