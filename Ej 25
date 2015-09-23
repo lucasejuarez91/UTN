@@ -13,8 +13,8 @@ int main() {
 		if(i==0){
 			max = num;
 		}
-		if(num > min) {
-			min = num;
+		if(num > max) {
+			max = num;
 		}
 	}
 	printf("El numero mayor:%d",max);
