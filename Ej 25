@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	
+	int i;
+	int num;
+	int max;
+	
+	for(i=0;i<3;i++){
+		printf("Ingrese un numero:\t");
+		scanf("%f",&num);
+		if(i==0){
+			max = num;
+		}
+		if(num > min) {
+			min = num;
+		}
+	}
+	printf("El numero mayor:%d",max);
+	
+}
