@@ -1,0 +1,32 @@
+// Ejercicio 59
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 20
+
+int main(){
+    int i; 
+    int num[3]; 
+    int numMaxAux;
+    int indMaxAux;
+      
+    for(i=0; i < MAX ; i++) {
+           printf("Ingrese un numero:\n");
+           scanf("%d",&num[i]); 
+			   if(i==0){
+				numMaxAux = num[i];
+				indMaxAux = i;
+			   }
+			   if(num[i] > numMaxAux){
+				numMaxAux = num[i];
+				indMaxAux = i;
+			   }
+    }   
+    system("CLS");
+    printf("Numero Mayor:%d que se encuentra en el Indice:%d\n",numMaxAux,indMaxAux);    
+    system("pause");
+    for(i=0;i<MAX;i++){
+           printf("Indice %d tiene valor: %d\n",i,num[i]);                   
+           
+    }            
+}
