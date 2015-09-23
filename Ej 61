@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 32
+
+
+int main(){
+    int i;
+    float importe[3];
+    float numMaxAux;
+    float indMaxAux;
+    
+    for(i=1; i < MAX ; i++) {
+           printf("Dia %d, ingrese un importe:\n",i);
+           scanf("%f",&importe[i]); 
+			   if(i==0){
+				numMaxAux = importe[i];
+				indMaxAux = i;
+			   }
+			   if(importe[i] > numMaxAux){
+				numMaxAux = importe[i];
+				indMaxAux = i;
+			   }
+    }   
+    system("CLS");
+		printf("El dia %d fue el de mayor gasto con un total de:%.2f",indMaxAux,numMaxAux);
+}
