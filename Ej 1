@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+    int i;
+    int num;
+    int acum;
+    float prom;
+    
+	for(i=0;i<5;i++){
+		printf("Ingrese un numero:\n");
+		scanf("%d",&num);
+		acum = acum + num;
+	}
+		prom = (acum/i);
+		printf("Promedio:%f",prom);
+}
