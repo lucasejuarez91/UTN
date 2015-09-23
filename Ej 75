@@ -5,14 +5,14 @@ int main()
 {
 int i;
 int j;
-int jubil;
-int obr_soc;
-int suel_bas;
-int suel_net;
+int jubil[30];
+int obr_soc[30];
+int suel_bas[30];
+int suel_net[30];
 int legMax;
 int bAntigMax;
-int bon_antig;
-int leg;
+int bon_antig[30];
+int leg[30];
 int tempLeg;
 int tempBon_antig;
 int tempjubil;
@@ -26,13 +26,13 @@ int tempsuel_net;
 		printf("Ingrese Nro de legajo:\n");
 		scanf("%d",&leg[i]);
 		printf("Ingrese Sueldo Basico:\n");
-		scanf("%f",&suel_bas[i]);
+		scanf("%d",&suel_bas[i]);
 		printf("Ingrese Bonificacion por antiguedad:\n");
-		scanf("%f",&bon_antig[i]);
+		scanf("%d",&bon_antig[i]);
 		//descuentos
-		jubil[i] = ((suel_bas*16)/100);
-		obr_soc[i] = ((suel_bas*4.5)/100);
-		suel_net[i] = (suel_bas[i]-jubil[i]-obr_soc[i]+bon_antig[i]);
+		jubil[i] = ((suel_bas[i]*2)/100);
+		obr_soc[i] = ((suel_bas[i]*4.5)/100);
+		suel_net[i] = ((suel_bas[i])-(jubil[i])-(obr_soc[i])+(bon_antig[i]));
 		if(i==0){
 			legMax = leg[i];
 			bAntigMax = bon_antig[i];
@@ -46,12 +46,12 @@ int tempsuel_net;
 		system("CLS");
 		printf("Vector Original");
 		for(i=0;i<30;i++){
-			printf("Nro Legajo\tSueldo Básico\tJubilacion\tObra social\tAntigüedad\tSueldo neto");
-			printf("%d\t%f\t%f\t%f\t%f\t%f\n",leg[i],suel_bas[i],jubil[i],obr_soc[i],bon_antig[i],suel_net[i]);
+			printf("Nro Legajo\tSueldo Básico\tJubilacion\tObraSocial\tAntigüedad\tSueldoNeto\n");
+			printf("%d\t%d\t%d\t%d\t%d\t%d\n",leg[i],suel_bas[i],jubil[i],obr_soc[i],bon_antig[i],suel_net[i]);
 		}
 		system("CLS");
-		printf("El obrero %d tuvo mayor bonificacion por antiguedad con %.2f",legMax,bAntigMax);
-		
+		printf("El obrero %d tuvo mayor bonificacion por antiguedad con %d\n",legMax,bAntigMax);
+		system("CLS");
 				for (i = 0; i < 30; i++) 
 				  { 
 					for (j = i + 1; j < 30; j++) 
@@ -91,7 +91,8 @@ int tempsuel_net;
 		system("CLS");	  
 			printf("Vector Ordenado");
 			for(i=0;i<30;i++){
-			printf("Nro Legajo\tSueldo Básico\tJubilacion\tObra social\tAntigüedad\tSueldo neto");
-			printf("%d\t%f\t%f\t%f\t%f\t%f\n",leg[i],suel_bas[i],jubil[i],obr_soc[i],bon_antig[i],suel_net[i]);
+			printf("Nro Legajo\tSueldo Básico\tJubilacion\tObraSocial\tAntigüedad\tSueldoNeto\n");
+			printf("%d\t%d\t%d\t%d\t%d\t%d\n",leg[i],suel_bas[i],jubil[i],obr_soc[i],bon_antig[i],suel_net[i]);
 			}
 }
+
