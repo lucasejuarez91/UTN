@@ -152,3 +152,25 @@ int Proveedores(){
 		printf("Elija una opcion.\n")
 		printf( "Proveedor 1: %s\nProveedor 2: %s\n Proveedor 3: %s",prov[0].descrProv,prov[1].descrProv,prov[2].descrProv);
 }
+
+int validaCantidad(int c){
+	if(c<0){
+		printf("Cantidad incorrecta.");
+	} else {
+		scanf("%d",&prod[i].cantProd );
+	}
+}
+
+int productosExistentes(){
+	if(prod[0].codProd==0){
+		printf("Para realizar otras operaciones primero debe ingresar un producto.");
+	}
+}
+
+int cantAgregada(){
+	for(j=0;j=i;j++) {
+		if(prod[j].codProd!=0){
+			acum++;
+		}
+	}
+}
