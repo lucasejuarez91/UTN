@@ -47,12 +47,9 @@ int menu(int i){
 								scanf("%d",&prod[j].impProd );
 								printf( "Cantidad: " );
 								scanf("%d",&prod[j].cantProd );
-//								Imprimimos los nuevos valores.
-								printf("CodProd\tCodProv\tDescr\tImpor\tCant\n");
-									printf("%d\t%d\t%s\t%d\t%d\n",prod[j].codProd,prod[j].codProv,prod[j].descrProd,prod[j].impProd,prod[j].cantProd);
 								break;
 						}else{
-							printf("Im sorry for you.\n");
+							printf("No existe el codigo a modificar.\n");
 							break;
 						}
 				}
@@ -72,7 +69,7 @@ int menu(int i){
 									printf("%d\t%d\t%s\t%d\t%d\n",prod[j].codProd,prod[j].codProv,prod[j].descrProd,prod[j].impProd,prod[j].cantProd);
 								break;
 						}else{
-							printf("Im sorry for you.\n");
+							printf("No existe el codigo a eliminar.\n");
 							break;
 						}
 				}
@@ -91,12 +88,12 @@ int menu(int i){
 							max[j]=prod[j];
 						}
 					}
-				printf("Impresion de los datos minimo\n");
+				printf("Datos minimos\n");
 					for( j=0; j<5; j++ ) {
 						printf("CodProd\tCodProv\tDescr\tImpor\tCant\n");
 						printf("%d\t%d\t%s\t%d\t%d\n",min[j].codProd,min[j].codProv,min[j].descrProd,min[j].impProd,min[j].cantProd);
 					}				
-				printf("Impresion de los datos maximo\n");
+				printf("Datos maximos\n");
 					for( j=0; j<5; j++ ) {
 						printf("CodProd\tCodProv\tDescr\tImpor\tCant\n");
 						printf("%d\t%d\t%s\t%d\t%d\n",max[j].codProd,max[j].codProv,max[j].descrProd,max[j].impProd,max[j].cantProd);
@@ -106,13 +103,13 @@ int menu(int i){
 				printf("--Listado de Productos\n");
 				for(i=0;i<5-1;i++) {
 					for(j=i+1;j<5;j++) {
-						if(prod[i].codProv<prod[j].codProv){ // se ordena si fue prestado o no
+						if(prod[i].codProv<prod[j].codProv){ 
 							prodAux=prod[i];
 							prod[i]=prod[j];
 							prod[j]=prodAux;
 						}
 						if(prod[i].codProv==prod[j].codProv){
-							if(strcmp(prod[i].descrProd,prod[j].descrProd)>0){ // se ordena ademas por los titulos STRINGCOMPARE
+							if(strcmp(prod[i].descrProd,prod[j].descrProd)>0){ 
 								prodAux=prod[i];
 								prod[i]=prod[j];
 								prod[j]=prodAux;
